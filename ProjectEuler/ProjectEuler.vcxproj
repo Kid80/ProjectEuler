@@ -128,6 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="problem_0xx\problem_00x\problem_001.cpp" />
+    <ClCompile Include="problem_0xx\problem_00x\problem_002.cpp" />
+    <ClCompile Include="problem_0xx\problem_00x\problem_003.cpp" />
+    <ClCompile Include="problem_0xx\problem_00x\problem_005.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="problem_0xx\problem_0xx.hpp" />
+    <ClInclude Include="problem_0xx\problem_00x\problem_00x.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
