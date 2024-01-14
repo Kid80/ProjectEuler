@@ -165,13 +165,58 @@ int problem_9(int n) {
 	}
 }
 
-bool is_palindrome(int n) {
-	int length = 1;
-	for (int pow_ten = 10; pow_ten <= n; pow_ten *= 10) {
-		length++;
+// Problem 10
+// Find sum of primes up to n
+uint64_t problem_10(int n) {
+	std::vector<int> primes;
+	uint64_t sum = 0;
+	for (int i = 2; i < n; i++) {
+		bool is_prime = true;
+		for (int j = 0; j < primes.size() && is_prime; j++) {
+			if (i % primes[j] == 0) {
+				is_prime = false;
+			}
+		}
+		if (is_prime) {
+			primes.push_back(i);
+			sum += i;
+		}
 	}
-	n 
-	return true;
+	return sum;
+}
+
+// Collatz sequence
+// If n is odd, n = 3n + 1
+// If n is even, n = n / 2
+
+// Problem 14:
+// Find the longest Collatz Sequence below n
+uint64_t problem_14(int n) {
+	uint64_t longest_chain = 0;
+	uint64_t longest_start = 1;
+	std::vector<uint64_t> lengths(n);
+	lengths[0] = 0;
+	lengths[1] = 0;
+	for (int i = 2; i < n; i++) {
+		uint64_t current = i;
+		int length = 0;
+		while (current >= i) {
+			length++;
+			if (current % 2 == 0) {
+				current /= 2;
+			}
+			else {
+				current = current * 3 + 1;
+			}
+		}
+		length += lengths[current];
+		lengths[i] = length;
+		if (length > longest_chain) {
+			longest_chain = length;
+			longest_start = i;
+		}
+	}
+	return longest_start;
 }
 
 int main() {
@@ -180,7 +225,7 @@ int main() {
 	//std::cout << problem_3(600851475143);
 	//std::cout << problem_7(10001) << std::endl;
 	//std::cout << problem_9(1000) << std::endl;
-	is_palindrome(10);
+	std::cout << "Result: " << problem_14(1000000) << std::endl;
 	auto end = std::chrono::high_resolution_clock::now();
 	auto time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 	std::cout << "Time taken: " << time.count() << "ms\n";
