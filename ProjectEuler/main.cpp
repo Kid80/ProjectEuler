@@ -3,17 +3,7 @@
 #include <chrono>
 #include <vector>
 
-int problem_6() {
-	int sum = 0;
-	for (int i = 0; i <= 100; i++) {
-		std::cout << i << std::endl;
-		for (int j = i + 1; j <= 100; j++) {
-			sum += i * j;
-		}
-	}
-	sum *= 2;
-	return sum;
-}
+#include "problem_0xx/problem_0xx.hpp"
 
 // Find the nth prime
 int problem_7(long long int n) {
@@ -113,11 +103,14 @@ uint64_t problem_14(int n) {
 
 int main() {
 	//600851475143
+	int a;
+	std::cin >> a;
 	auto start = std::chrono::high_resolution_clock::now();
 	//std::cout << problem_3(600851475143);
 	//std::cout << problem_7(10001) << std::endl;
 	//std::cout << problem_9(1000) << std::endl;
-	std::cout << "Result: " << problem_14(1000000) << std::endl;
+	std::cout << "Result: " << problem_012(a) << std::endl;
+	//std::cout << "Result: " << problem_14(1000000) << std::endl;
 	auto end = std::chrono::high_resolution_clock::now();
 	auto time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 	std::cout << "Time taken: " << time.count() << "ms\n";

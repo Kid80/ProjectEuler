@@ -30,12 +30,24 @@
     <ClCompile Include="problem_0xx\problem_00x\problem_005.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="problem_0xx\problem_00x\problem_006.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="problem_0xx\problem_00x\problem_008.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="problem_0xx\problem_01x\problem_012.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="problem_0xx\problem_00x\problem_00x.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="problem_0xx\problem_0xx.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="problem_0xx\problem_01x\problem_01x.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

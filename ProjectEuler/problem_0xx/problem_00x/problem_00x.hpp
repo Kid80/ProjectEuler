@@ -6,3 +6,6 @@ uint64_t problem_002(uint64_t n);
 uint64_t problem_003(uint64_t n);
 
 uint64_t problem_005(uint64_t n);
+uint64_t problem_006();
+
+uint64_t problem_008();
