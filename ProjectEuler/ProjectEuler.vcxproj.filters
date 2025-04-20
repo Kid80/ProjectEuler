@@ -39,6 +39,9 @@
     <ClCompile Include="problem_0xx\problem_01x\problem_012.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="problem_0xx\problem_01x\problem_015.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="problem_0xx\problem_00x\problem_00x.hpp">
